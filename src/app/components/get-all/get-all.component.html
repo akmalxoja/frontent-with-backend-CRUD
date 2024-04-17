@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Course_id</th>
+        <th scope="col">Phone</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+    @for(user of users; track user.student_id){
+        <tr>
+            <th scope="row">{{user.student_id}}</th>
+            <td>{{user.full_name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.course_id}}</td>
+            <td>{{user.perent_phone}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
