@@ -1,1 +1,29 @@
-<p>create works!</p>
+<form class="submit-form">
+    @if(!isSubmitted){
+        <div class="form-group">
+            <label for="name">Full_Name</label>
+            <input type="text" class="form-control" id="name" placeholder="enter name" [(ngModel)]="setValue.name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="setValue.email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="course_id">Id</label>
+            <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="setValue.email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="perent_phone">Phone</label>
+            <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="setValue.email" name="email">
+        </div>
+    
+        
+    
+        <br>
+        <button type="submit" class="btn btn-primary" (click)="setUser()">Submit</button> 
+    } @else {
+        <h1>Ma'lumotlar Saqlandi</h1>
+    }
+</form>

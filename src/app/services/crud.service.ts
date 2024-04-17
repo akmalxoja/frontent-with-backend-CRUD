@@ -8,11 +8,15 @@ import { User } from '../models/user';
 })
 export class CrudService {
 
-  baseUrl: string = "https://localhost:7266/api/Students/GettAllStudentsFromDB"
+  baseUrl: string = "https://localhost:7266/api/Students/"
   constructor(private http: HttpClient) { }
 
     getAll(): Observable<User[]>{
-      return this.http.get<User[]>(this.baseUrl)
+      return this.http.get<User[]>(this.baseUrl + 'GettAllStudentsFromDB')
+    }
+
+    create(data: User): Observable<User> {
+      return this.http.post<User>(this.baseUrl + 'CreateUser', data)
     }
 
 }
