@@ -1,29 +1,23 @@
-<form class="submit-form">
-    @if(!isSubmitted){
-        <div class="form-group">
-            <label for="name">Full_Name</label>
-            <input type="text" class="form-control" id="name" placeholder="enter name" [(ngModel)]="setValue.name" name="name">
-        </div>
-        <div class="form-group">
-          <label for="age">Age</label>
-          <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="setValue.email" name="email">
-        </div>
+<div style="margin-left: 30px;">
 
-        <div class="form-group">
-            <label for="course_id">Id</label>
-            <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="setValue.email" name="email">
+    <form>
+        <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="setValue.full_name">
         </div>
-
-        <div class="form-group">
-            <label for="perent_phone">Phone</label>
-            <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="setValue.email" name="email">
+        <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="text" class="form-control" id="age" name="age"  [(ngModel)]="setValue.age">
         </div>
-    
-        
-    
-        <br>
-        <button type="submit" class="btn btn-primary" (click)="setUser()">Submit</button> 
-    } @else {
-        <h1>Ma'lumotlar Saqlandi</h1>
-    }
-</form>
+        <div class="mb-3">
+            <label for="cr-id" class="form-label">Course id</label>
+            <input type="text" class="form-control" id="cr-id" name="cr-id" [(ngModel)]="setValue.course_id">
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="setValue.perent_phone">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <!-- <button class="btn btn-primary" (click)="creat()">Submit</button> -->
+    </form>
+</div>    
